@@ -1,38 +1,66 @@
 # Reception Events Booking System
 
-This is a web application for managing event bookings, built with Next.js and TypeScript.
+A comprehensive, modern web application designed to manage event bookings, room scheduling, and client communications for reception facilities. Built with Next.js and TypeScript, this system provides administrators and receptionists with powerful tools to streamline daily operations.
 
-## Project Details
+## 🚀 Key Features
 
-*   **Framework:** [Next.js](https://nextjs.org/)
+*   **Role-Based Access:** Distinct views and capabilities for `Admins` (financials, audit, complete oversight) and `Receptionists` (daily calendar, booking management).
+*   **Advanced Calendar & Scheduling:** Interactive calendar views with automated collision detection to prevent double-booking of rooms.
+*   **Room & Inventory Management:** Track available rooms, their capacities, and scheduling statuses.
+*   **Detailed Client Data Model:** Capture robust client details for comprehensive follow-ups, tracking, and relationship management.
+*   **Integrated Communications:** Support for automated SMS and WhatsApp invitations and confirmations.
+*   **Payment Integration:** Built-in tracking for event costs, deposits, and payment statuses.
+*   **External Syncs:** Integration capabilities with Google Calendar for external scheduling, and Google Sheets for customized data exports.
+*   **Timetable Printing:** Dedicated functionality for generating and printing daily/weekly event timetables.
+*   **Comprehensive Audit Logging:** An immutable data log tracking every system action (who, what, when) for security and accountability.
+*   **Modern UI/UX:** A responsive, beautifully designed interface using Tailwind CSS and shadcn/ui components.
+*   **Internal Newsletters & Notifications:** Share updates about room statuses and general facility info with staff.
+
+## 🛠️ Technology Stack
+
+*   **Frontend Framework:** [Next.js](https://nextjs.org/) (App Router)
 *   **Language:** [TypeScript](https://www.typescriptlang.org/)
-*   **Styling:** [Tailwind CSS](https://tailwindcss.com/) with [shadcn/ui](https://ui.shadcn.com/)
-*   **Database:** [Google Sheets](https://www.google.com/sheets/about/) (for now)
-*   **Deployment:** Not yet deployed
+*   **Styling & UI:** [Tailwind CSS v4](https://tailwindcss.com/), [shadcn/ui](https://ui.shadcn.com/), [Framer Motion](https://www.framer.com/motion/)
+*   **Main Database & Backend:** [Supabase](https://supabase.com/) (PostgreSQL, Auth, Storage)
+*   **Auxiliary Services:** Firebase (for specific realtime functionality/notifications)
+*   **Proposed External Integrations:** Google Calendar/Sheets APIs, Twilio/Meta Graph (SMS/WhatsApp), Payment provider (Stripe/etc).
 
-## Functionality
+## 💻 Getting Started
 
-*   **Dashboard:** A dashboard view with statistics on total events, upcoming events, revenue, and attendees.
-*   **Calendar:** A calendar view to display events.
-*   **Add Event Form:** A form to add new events to the system.
-*   **Modern UI:** A modern and responsive user interface built with shadcn/ui components.
+### Prerequisites
+*   Node.js (v18+)
+*   npm or pnpm
+*   A Supabase Project
 
-## Specifications
+### Installation
 
-The system is designed to handle approximately 350 events per year.
+1.  **Clone the Repository**
+    ```bash
+    git clone https://github.com/Alex-Gichau/reception-events-booking-system.git
+    cd reception-events-booking-system
+    ```
 
-## Getting Started
+2.  **Environment Variables**
+    Create a `.env.local` file in the root directory and add your Supabase and Firebase keys (see `.env.example` if applicable).
 
-First, run the development server:
+3.  **Install Dependencies**
+    ```bash
+    npm install
+    ```
 
-```bash
-npm run dev
-```
+4.  **Run the Development Server**
+    ```bash
+    npm run dev
+    ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+5.  **Open the Application**
+    Navigate to [http://localhost:3000](http://localhost:3000) in your browser.
 
-## Next Steps
+## 🗺️ Project Roadmap
 
-*   Connect the "Add Event" form to a Google Sheet to store event data.
-*   Display events from the Google Sheet on the calendar and dashboard.
-*   Add authentication to secure the application.
+1.  **UI Construction:** Building out the core application states and layouts.
+2.  **Database & Auth Setup:** Initializing Supabase, creating the schema (Events, Rooms, Clients, Users, Audit Logs).
+3.  **Core Application Logic:** Implementing the booking workflows and collision detection algorithms.
+4.  **Integrations Phase 1:** Syncing with Google Calendar and Google Sheets.
+5.  **Integrations Phase 2:** Setting up Payment Gateways, SMS, and WhatsApp functionalities.
+6.  **Refinement:** Timetable printing, internal newsletters, and rigorous testing.
