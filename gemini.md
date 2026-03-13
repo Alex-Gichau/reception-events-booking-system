@@ -93,3 +93,18 @@ A comprehensive modern web application designed for managing event bookings at a
 - **Phase 4: Integrations (Phase A)** Google Calendar Sync and Google Sheets integration.
 - **Phase 5: Payments & Communications** Stripe (or equivalent) for payments, and Twilio/WhatsApp integration for SMS and message capabilities.
 - **Phase 6: Printing & Polish** Timetable printable views, newsletters/broadcasts to staff, performance optimization, and final deployment.
+
+## 6. Progress Log
+
+### ✅ Completed
+1. **System Blueprinting:** Defined exact Tech Stack, Roles, and Schemas to act as the authoritative `gemini.md` blueprint. 
+2. **Deployment Config:** Set up Next.js static export options and configured an automated GitHub Actions deployment workflow for GitHub Pages.
+3. **Global Loading State:** Designed a glassmorphic, responsive `<LoadingIndicator />` with a CSS-animated ellipsis for seamless route transitions.
+4. **Role-Based Access Control (RBAC):** (Phase 3 Fast-Tracked)
+   - Configured `@supabase/ssr` server and browser clients.
+   - Built an Edge Middleware to protect routes, enforcing `/login` redirects and stopping non-admins from hitting `/admin/*`.
+   - Created an `AuthContext` React Provider to expose user sessions and `admin` / `receptionist` boolean flags to any client component.
+   - Created an `<AuthGuard>` wrapper for restricting specific UI sections by role.
+   - Built a custom `/login` page and a `/unauthorized` fallback page.
+   - Designed a dynamic navbar that displays the logged-in User's badge, initials, and role, while hiding itself cleanly when on the login route.
+   - Wrote the foundational custom SQL (`supabase/profiles.sql`) containing the `profiles` table schema, ENUM definitions, Row Level Security Policies, and an automatic registration Trigger to default users to receptionists.
