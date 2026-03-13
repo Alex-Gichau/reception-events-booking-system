@@ -1,4 +1,25 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Reception Events Booking System
+
+This is a web application for managing event bookings, built with Next.js and TypeScript.
+
+## Project Details
+
+*   **Framework:** [Next.js](https://nextjs.org/)
+*   **Language:** [TypeScript](https://www.typescriptlang.org/)
+*   **Styling:** [Tailwind CSS](https://tailwindcss.com/) with [shadcn/ui](https://ui.shadcn.com/)
+*   **Database:** [Google Sheets](https://www.google.com/sheets/about/) (for now)
+*   **Deployment:** Not yet deployed
+
+## Functionality
+
+*   **Dashboard:** A dashboard view with statistics on total events, upcoming events, revenue, and attendees.
+*   **Calendar:** A calendar view to display events.
+*   **Add Event Form:** A form to add new events to the system.
+*   **Modern UI:** A modern and responsive user interface built with shadcn/ui components.
+
+## Specifications
+
+The system is designed to handle approximately 350 events per year.
 
 ## Getting Started
 
@@ -6,31 +27,12 @@ First, run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Next Steps
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+*   Connect the "Add Event" form to a Google Sheet to store event data.
+*   Display events from the Google Sheet on the calendar and dashboard.
+*   Add authentication to secure the application.
