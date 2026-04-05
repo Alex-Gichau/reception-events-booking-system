@@ -15,22 +15,42 @@ export default function LoginPage() {
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
 
-  const handleSignIn = async (e: React.FormEvent) => {
+  const [isSignUp, setIsSignUp] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setError("");
     setLoading(true);
 
-    const { error } = await supabase.auth.signInWithPassword({
-      email,
-      password,
-    });
+    let authError = null;
 
-    if (error) {
-      setError(error.message);
+    if (isSignUp) {
+      const { error } = await supabase.auth.signUp({
+        email,
+        password,
+      });
+      authError = error;
+    } else {
+      const { error } = await supabase.auth.signInWithPassword({
+        email,
+        password,
+      });
+      authError = error;
+    }
+
+    if (authError) {
+      setError(authError.message);
       setLoading(false);
     } else {
-      router.push("/");
-      router.refresh();
+      if (isSignUp) {
+        // Some configurations require email confirmation
+        alert("Account created successfully! Check your email or try logging in.");
+        setIsSignUp(false);
+        setLoading(false);
+      } else {
+        router.push("/");
+        router.refresh();
+      }
     }
   };
 
@@ -55,7 +75,7 @@ export default function LoginPage() {
               EventSync Pro
             </h1>
             <p className="mt-1 text-sm text-slate-400">
-              Sign in to your account to continue
+              {isSignUp ? "Create a new account" : "Sign in to your account to continue"}
             </p>
           </div>
 
@@ -68,7 +88,7 @@ export default function LoginPage() {
           )}
 
           {/* Form */}
-          <form onSubmit={handleSignIn} className="space-y-5">
+          <form onSubmit={handleSubmit} className="space-y-5">
             <div>
               <label
                 htmlFor="email"
@@ -99,7 +119,7 @@ export default function LoginPage() {
                 <input
                   id="password"
                   type={showPassword ? "text" : "password"}
-                  autoComplete="current-password"
+                  autoComplete={isSignUp ? "new-password" : "current-password"}
                   required
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
@@ -132,14 +152,24 @@ export default function LoginPage() {
               ) : (
                 <LogIn className="h-4 w-4" />
               )}
-              {loading ? "Signing in…" : "Sign In"}
+              {isSignUp ? (loading ? "Creating account…" : "Sign Up") : (loading ? "Signing in…" : "Sign In")}
             </button>
           </form>
 
-          {/* Footer */}
-          <p className="mt-8 text-center text-xs text-slate-500">
-            For access, contact your system administrator.
-          </p>
+          {/* Footer Toggle */}
+          <div className="mt-6 text-center text-sm text-slate-400">
+            {isSignUp ? "Already have an account? " : "Don't have an account? "}
+            <button
+              type="button"
+              onClick={() => {
+                setIsSignUp(!isSignUp);
+                setError("");
+              }}
+              className="text-indigo-400 hover:text-indigo-300 font-medium transition"
+            >
+              {isSignUp ? "Sign in" : "Sign up"}
+            </button>
+          </div>
         </div>
 
         {/* Role hint */}

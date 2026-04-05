@@ -87,12 +87,29 @@ A comprehensive modern web application designed for managing event bookings at a
 - `created_at` (timestamp)
 
 ## 5. Implementation Roadmap
-- **Phase 1: Foundation & UI Expansion** Next.js setup, styling, responsive layouts, and building the UI states for dashboards, calendar, and forms (Ongoing).
-- **Phase 2: Database & Core Logic** Supabase integration, defining relational tables, implementing collision detection, and building the Add/Edit/Cancel Event flow.
-- **Phase 3: Authentication & Audit Logging** Setting up Supabase Auth, establishing Admin vs Receptionist views, and implementing tracking for the audit log.
-- **Phase 4: Integrations (Phase A)** Google Calendar Sync and Google Sheets integration.
-- **Phase 5: Payments & Communications** Stripe (or equivalent) for payments, and Twilio/WhatsApp integration for SMS and message capabilities.
-- **Phase 6: Printing & Polish** Timetable printable views, newsletters/broadcasts to staff, performance optimization, and final deployment.
+
+- **Phase 1: Foundation, DB, & Auth (✅ ALMOST COMPLETE)** 
+  - Next.js setup, Supabase connection, Dark Mode, Role-Based Access Control, Dashboard charts, and basic generic Event hooks.
+  
+- **Phase 2: CRM & Conflict Resolution (🎯 START HERE NEXT)**
+  - **Step A - Client/Attendee CRM**: Build out the `clients` table management UI so you can add real attendees and select them seamlessly when creating a new event.
+  - **Step B - Room Inventory & Conflict Checking**: Implement the inventory UI for `rooms` and write an advanced Next.js Server Action that actively prevents two events from double-booking the exact same physical room at the same time.
+
+- **Phase 3: Advanced Filtering & Search**
+  - Add a fast global text search component to the Navbar.
+  - Add multi-tag filtering on the Calendar (e.g., color sorting Paid vs Pending vs Internal events).
+
+- **Phase 4: Integrations & External Sync**
+  - Implement dynamic `.ics` file generation for 1-click Google Calendar / Apple Calendar syncing.
+  - Build automated CSV/Google Sheets export mechanisms for administration.
+
+- **Phase 5: Automated Communications & Ticketing**
+  - Integrate an Email API (Resend or SendGrid) to fire automatic, branded email reminders to people 24-hours before an event kicks off.
+  - Plug in Stripe to process tickets or collect client invoices securely.
+
+- **Phase 6: Printing, PDF Timetables & Polish**
+  - Finalize print-ready timetable UI views.
+  - Institute the immutable `audit_log` tracking system for security.
 
 ## 6. Progress Log
 
@@ -105,6 +122,11 @@ A comprehensive modern web application designed for managing event bookings at a
    - Built an Edge Middleware to protect routes, enforcing `/login` redirects and stopping non-admins from hitting `/admin/*`.
    - Created an `AuthContext` React Provider to expose user sessions and `admin` / `receptionist` boolean flags to any client component.
    - Created an `<AuthGuard>` wrapper for restricting specific UI sections by role.
-   - Built a custom `/login` page and a `/unauthorized` fallback page.
-   - Designed a dynamic navbar that displays the logged-in User's badge, initials, and role, while hiding itself cleanly when on the login route.
-   - Wrote the foundational custom SQL (`supabase/profiles.sql`) containing the `profiles` table schema, ENUM definitions, Row Level Security Policies, and an automatic registration Trigger to default users to receptionists.
+   - Built a custom `/login` page and a `/unauthorized` fallback page, equipped tightly with Sign Up and Sign In toggles.
+   - Designed a dynamic navbar that displays the logged-in User's badge, initials, and role.
+   - Wrote and applied `supabase/profiles.sql` containing the `profiles` table schema and robust `search_path` registration Triggers.
+5. **Database Interaction & UI Modernization:**
+   - Bootstrapped Next-Themes for seamless Dark/Light Mode toggles.
+   - Wired `src/app/actions/events.ts` server actions connecting to live Supabase DB for CRUD operations.
+   - Transformed the static Dashboard into a dynamic Recharts visualization (`WeeklyEventsChart.tsx`) driven by actual backend data. 
+   - Wired interactive Event Details and Edit/Delete Modals seamlessly interacting with PostgreSQL updates.

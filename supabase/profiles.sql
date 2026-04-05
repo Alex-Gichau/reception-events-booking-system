@@ -43,7 +43,10 @@ WITH CHECK (id = auth.uid());
 
 -- Create a trigger function that automatically creates a profile when a new user signs up
 CREATE OR REPLACE FUNCTION public.handle_new_user() 
-RETURNS TRIGGER AS $$
+RETURNS TRIGGER 
+LANGUAGE plpgsql 
+SECURITY DEFINER SET search_path = public
+AS $$
 BEGIN
   INSERT INTO public.profiles (id, email, full_name, role)
   VALUES (
@@ -52,13 +55,13 @@ BEGIN
     new.raw_user_meta_data->>'full_name',
     -- Default to receptionist, unless it's the very first user, then make them admin
     CASE 
-      WHEN (SELECT COUNT(*) FROM profiles) = 0 THEN 'admin'::user_role
+      WHEN (SELECT COUNT(*) FROM public.profiles) = 0 THEN 'admin'::user_role
       ELSE 'receptionist'::user_role
     END
   );
   RETURN new;
 END;
-$$ LANGUAGE plpgsql SECURITY DEFINER;
+$$;
 
 -- Trigger the function every time a user is created
 CREATE TRIGGER on_auth_user_created

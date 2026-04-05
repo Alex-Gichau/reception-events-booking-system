@@ -4,7 +4,7 @@ import { usePathname } from "next/navigation";
 import { Calendar, Bell, Menu, X, LogOut, User } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
 import { useAuth } from "@/lib/auth/AuthContext";
-
+import { ThemeToggle } from "@/components/theme-toggle";
 export default function Navbar() {
   const [isNotificationOpen, setIsNotificationOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -46,6 +46,7 @@ export default function Navbar() {
   const navLinks = [
     { href: "/", label: "Dashboard" },
     { href: "/calendar", label: "Calendar" },
+    { href: "/clients", label: "Clients" },
     { href: "/reports", label: "Reports" },
     { href: "/settings", label: "Settings" },
   ];
@@ -92,6 +93,7 @@ export default function Navbar() {
           </div>
 
           <div className="flex items-center gap-3">
+            <ThemeToggle />
             {/* Notifications */}
             <div className="relative" ref={notificationRef}>
               <button
