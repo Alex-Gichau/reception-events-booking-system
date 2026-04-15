@@ -36,7 +36,7 @@ export async function middleware(request: NextRequest) {
   const publicRoutes = ["/login"];
   const isPublicRoute = publicRoutes.some((route) =>
     pathname.startsWith(route)
-  );
+  ) || pathname === "/";
 
   // Redirect unauthenticated users to /login
   if (!user && !isPublicRoute) {
@@ -45,10 +45,10 @@ export async function middleware(request: NextRequest) {
     return NextResponse.redirect(url);
   }
 
-  // Redirect authenticated users away from login
+  // Redirect authenticated users away from login directly into their workspace dashboard
   if (user && pathname === "/login") {
     const url = request.nextUrl.clone();
-    url.pathname = "/";
+    url.pathname = "/dashboard";
     return NextResponse.redirect(url);
   }
 

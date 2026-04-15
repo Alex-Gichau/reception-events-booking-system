@@ -6,16 +6,29 @@ import { revalidatePath } from "next/cache"
 export async function addEvent(formData: FormData) {
   const supabase = await createClient()
 
-  // Ensure these parse properly based on your DB schema requirements
   const title = formData.get("eventName")?.toString() || ""
   const date = formData.get("date")?.toString() || ""
-  const time = formData.get("time")?.toString() || ""
-  const location = formData.get("location")?.toString() || ""
+  const start_time = formData.get("start_time")?.toString() || ""
+  const end_time = formData.get("end_time")?.toString() || ""
   const description = formData.get("description")?.toString() || ""
+  const room_id = formData.get("room_id")?.toString() || null
+  const client_id = formData.get("client_id")?.toString() || null
+  const poster_url = formData.get("poster_url")?.toString() || null
 
-  // Use default times / colors for our simplified schema
-  const start_time = `${time}:00`
-  const end_time = `${time}:00` // default to 1-hour or same time, can compute proper end_time later
+  // Physical Room Booking Conflict Resolution
+  if (room_id && room_id !== "none" && date && start_time && end_time) {
+    const { data: overlapping } = await supabase
+      .from("events")
+      .select("id, title")
+      .eq("date", date)
+      .eq("room_id", room_id)
+      .lt("start_time", end_time)
+      .gt("end_time", start_time)
+
+    if (overlapping && overlapping.length > 0) {
+      throw new Error(`Conflict: This Space is already booked for '${overlapping[0].title}' during this time block.`)
+    }
+  }
   
   const { data, error } = await supabase
     .from("events")
@@ -25,9 +38,11 @@ export async function addEvent(formData: FormData) {
       start_time,
       end_time,
       description,
-      location,
-      duration_hours: 1, // defaulting to 1 hour
-      color: "bg-blue-500", // default color
+      poster_url,
+      room_id: room_id === "none" ? null : room_id,
+      client_id: client_id === "none" ? null : client_id,
+      duration_hours: 1,
+      color: "bg-blue-500",
     }])
     .select()
 
@@ -36,7 +51,7 @@ export async function addEvent(formData: FormData) {
     throw new Error(error.message)
   }
 
-  revalidatePath("/calendar") // Refresh calendar
+  revalidatePath("/calendar") 
   return data
 }
 

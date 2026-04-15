@@ -5,6 +5,8 @@ import { Calendar, Bell, Menu, X, LogOut, User } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
 import { useAuth } from "@/lib/auth/AuthContext";
 import { ThemeToggle } from "@/components/theme-toggle";
+import SearchBar from "@/components/SearchBar";
+
 export default function Navbar() {
   const [isNotificationOpen, setIsNotificationOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -40,13 +42,14 @@ export default function Navbar() {
     };
   }, []);
 
-  // Hide Navbar completely on login page
-  if (pathname === "/login") return null;
+  // Hide Navbar completely on login and landing pages
+  if (pathname === "/login" || pathname === "/") return null;
 
   const navLinks = [
-    { href: "/", label: "Dashboard" },
+    { href: "/dashboard", label: "Dashboard" },
     { href: "/calendar", label: "Calendar" },
     { href: "/clients", label: "Clients" },
+    { href: "/rooms", label: "Rooms" },
     { href: "/reports", label: "Reports" },
     { href: "/settings", label: "Settings" },
   ];
@@ -91,6 +94,8 @@ export default function Navbar() {
               );
             })}
           </div>
+
+          <SearchBar />
 
           <div className="flex items-center gap-3">
             <ThemeToggle />

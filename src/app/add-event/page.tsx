@@ -1,111 +1,20 @@
-"use client"
+import { getClients } from "@/app/actions/clients"
+import { getRooms } from "@/app/actions/rooms"
+import AddEventForm from "./AddEventForm"
 
-import { useState } from "react"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { Label } from "@/components/ui/label"
-
-import { addEvent } from "@/app/actions/events"
-
-export default function AddEventPage() {
-  const [eventName, setEventName] = useState("")
-  const [date, setDate] = useState("")
-  const [time, setTime] = useState("")
-  const [location, setLocation] = useState("")
-  const [description, setDescription] = useState("")
-  const [isSubmitting, setIsSubmitting] = useState(false)
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsSubmitting(true)
-    
-    try {
-      const formData = new FormData()
-      formData.append("eventName", eventName)
-      formData.append("date", date)
-      formData.append("time", time)
-      formData.append("location", location)
-      formData.append("description", description)
-
-      await addEvent(formData)
-      alert("Event added successfully!")
-      
-      // Reset form
-      setEventName("")
-      setDate("")
-      setTime("")
-      setLocation("")
-      setDescription("")
-    } catch (error) {
-      console.error(error)
-      alert("Failed to add event. Make sure your connect to Supabase database.")
-    } finally {
-      setIsSubmitting(false)
-    }
-  }
+export default async function AddEventPage() {
+  const clients = await getClients() || []
+  const rooms = await getRooms() || []
 
   return (
-    <main className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      <div className="bg-white rounded-lg shadow p-8">
-        <h1 className="text-2xl font-bold text-gray-900 mb-6">Add a New Event</h1>
-        <form onSubmit={handleSubmit} className="space-y-6">
-          <div>
-            <Label htmlFor="event-name">Event Name</Label>
-            <Input
-              id="event-name"
-              type="text"
-              value={eventName}
-              onChange={(e) => setEventName(e.target.value)}
-              required
-            />
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div>
-              <Label htmlFor="date">Date</Label>
-              <Input
-                id="date"
-                type="date"
-                value={date}
-                onChange={(e) => setDate(e.target.value)}
-                required
-              />
-            </div>
-            <div>
-              <Label htmlFor="time">Time</Label>
-              <Input
-                id="time"
-                type="time"
-                value={time}
-                onChange={(e) => setTime(e.target.value)}
-                required
-              />
-            </div>
-          </div>
-          <div>
-            <Label htmlFor="location">Location</Label>
-            <Input
-              id="location"
-              type="text"
-              value={location}
-              onChange={(e) => setLocation(e.target.value)}
-              required
-            />
-          </div>
-          <div>
-            <Label htmlFor="description">Description</Label>
-            <Textarea
-              id="description"
-              value={description}
-              onChange={(e) => setDescription(e.target.value)}
-            />
-          </div>
-          <div className="text-right">
-            <Button type="submit" disabled={isSubmitting}>
-              {isSubmitting ? "Adding..." : "Add Event"}
-            </Button>
-          </div>
-        </form>
+    <main className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-8 animate-in fade-in duration-500">
+      <div className="bg-white dark:bg-slate-900 border border-gray-100 dark:border-slate-800 rounded-xl shadow-lg p-8">
+        <h1 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">Schedule New Event</h1>
+        <p className="text-gray-500 dark:text-gray-400 mb-8">
+          The system will automatically prevent room double-bookings in real-time.
+        </p>
+        
+        <AddEventForm clients={clients} rooms={rooms} />
       </div>
     </main>
   )
