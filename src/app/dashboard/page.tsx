@@ -4,6 +4,8 @@ import { getEvents } from '@/app/actions/events';
 import WeeklyEventsChart from '@/components/WeeklyEventsChart';
 import UpcomingEventsList from '@/components/UpcomingEventsList';
 
+export const dynamic = 'force-dynamic';
+
 export default async function Home() {
   let events = [];
   try {

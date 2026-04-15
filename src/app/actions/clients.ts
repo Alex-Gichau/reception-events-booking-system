@@ -2,6 +2,7 @@
 
 import { createClient } from "@/lib/supabase/server"
 import { revalidatePath } from "next/cache"
+import { writeLog } from "@/lib/logger"
 
 export async function getClients() {
   const supabase = await createClient()
@@ -27,8 +28,12 @@ export async function addClient(formData: FormData) {
 
   const { error } = await supabase.from('clients').insert([clientData])
   
-  if (error) throw new Error(error.message)
+  if (error) {
+    writeLog(`Error adding client ${clientData.first_name}: ${error.message}`, 'ERROR')
+    throw new Error(error.message)
+  }
   
+  writeLog(`System registered new client: ${clientData.first_name} ${clientData.last_name}`, 'SUCCESS')
   revalidatePath("/clients")
   return true
 }
@@ -37,8 +42,12 @@ export async function deleteClient(id: string) {
   const supabase = await createClient()
   const { error } = await supabase.from('clients').delete().eq('id', id)
   
-  if (error) throw new Error(error.message)
+  if (error) {
+    writeLog(`Error deleting client ID ${id}: ${error.message}`, 'ERROR')
+    throw new Error(error.message)
+  }
   
+  writeLog(`System purged client record (ID: ${id})`, 'WARN')
   revalidatePath("/clients")
   return true
 }

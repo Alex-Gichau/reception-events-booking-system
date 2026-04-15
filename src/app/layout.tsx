@@ -12,6 +12,7 @@ export const metadata: Metadata = {
 
 import { AuthProvider } from "@/lib/auth/AuthContext";
 import { ThemeProvider } from "@/components/theme-provider";
+import ClientTelemetry from "@/components/ClientTelemetry";
 
 export default function RootLayout({
   children,
@@ -23,6 +24,7 @@ export default function RootLayout({
       <body>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <AuthProvider>
+            <ClientTelemetry />
             <Navbar />
             {children}
             <Footer />
@@ -30,6 +32,7 @@ export default function RootLayout({
               <LoadingIndicator />
             </Suspense>
           </AuthProvider>
+
         </ThemeProvider>
       </body>
     </html>

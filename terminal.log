@@ -1,0 +1,190 @@
+[2026-04-15T10:17:20.779Z] [SUCCESS] System booked new master timeline Event: 'IGNITE Worship Experience' set for 2026-05-01
+[2026-04-15T10:17:21.347Z] [INFO] Auto-dispatching simulated email receipt to internal client target: info@pceastandrews.org
+[2026-04-15T10:17:55.602Z] [WARN] Operator manually mutated configuration for Event record 'IGNITE Worship Experience' (UUID: 2cf35b79-18b2-4bf6-8d7e-1d8b9f05a964)
+[2026-04-15T10:20:12.379Z] [INFO] [CLIENT_SIDECAR] User securely navigated viewport to Route: /dashboard
+[2026-04-15T10:21:26.533Z] [INFO] [CLIENT_SIDECAR] GUI Navigation Input Triggered on Hyperlink: [Calendar]
+[2026-04-15T10:21:26.912Z] [INFO] [CLIENT_SIDECAR] User securely navigated viewport to Route: /calendar
+[2026-04-15T10:21:33.042Z] [INFO] [CLIENT_SIDECAR] GUI Navigation Input Triggered on Hyperlink: [Clients]
+[2026-04-15T10:21:33.425Z] [INFO] [CLIENT_SIDECAR] User securely navigated viewport to Route: /clients
+[2026-04-15T10:21:52.756Z] [INFO] [CLIENT_SIDECAR] User securely navigated viewport to Route: /log
+[2026-04-15T10:22:02.851Z] [INFO] [CLIENT_SIDECAR] User securely navigated viewport to Route: /
+[2026-04-15T10:22:04.651Z] [INFO] [CLIENT_SIDECAR] User securely navigated viewport to Route: /dashboard
+[2026-04-15T10:22:07.830Z] [INFO] [CLIENT_SIDECAR] User securely navigated viewport to Route: /log
+[2026-04-15T10:22:16.914Z] [INFO] [CLIENT_SIDECAR] User securely navigated viewport to Route: /logs
+[2026-04-15T10:23:24.780Z] [INFO] [CLIENT_SIDECAR] GUI Navigation Input Triggered on Hyperlink: [Dashboard]
+[2026-04-15T10:23:25.219Z] [INFO] [CLIENT_SIDECAR] User securely navigated viewport to Route: /dashboard
+[2026-04-15T10:23:59.636Z] [INFO] [CLIENT_SIDECAR] GUI Navigation Input Triggered on Hyperlink: [Reports]
+[2026-04-15T10:24:00.101Z] [INFO] [CLIENT_SIDECAR] User securely navigated viewport to Route: /reports
+[2026-04-15T10:24:12.948Z] [INFO] [CLIENT_SIDECAR] GUI Navigation Input Triggered on Hyperlink: [Rooms]
+[2026-04-15T10:24:13.514Z] [INFO] [CLIENT_SIDECAR] User securely navigated viewport to Route: /rooms
+[2026-04-15T10:24:52.501Z] [INFO] [CLIENT_SIDECAR] GUI Click Input Triggered on Button component: [Add Space]
+[2026-04-15T10:25:08.427Z] [INFO] [CLIENT_SIDECAR] GUI Click Input Triggered on Button component: [Save Room]
+[2026-04-15T10:25:10.892Z] [INFO] [CLIENT_SIDECAR] User securely navigated viewport to Route: /rooms
+[2026-04-15T10:25:12.297Z] [INFO] [CLIENT_SIDECAR] GUI Click Input Triggered on Button component: [Add Space]
+[2026-04-15T10:25:44.327Z] [INFO] [CLIENT_SIDECAR] GUI Click Input Triggered on Button component: [Save Room]
+[2026-04-15T10:25:46.640Z] [INFO] [CLIENT_SIDECAR] User securely navigated viewport to Route: /rooms
+[2026-04-15T10:25:51.150Z] [INFO] [CLIENT_SIDECAR] GUI Click Input Triggered on Button component: [Add Space]
+[2026-04-15T10:26:02.908Z] [INFO] [CLIENT_SIDECAR] GUI Click Input Triggered on Button component: [Save Room]
+[2026-04-15T10:26:05.383Z] [INFO] [CLIENT_SIDECAR] User securely navigated viewport to Route: /rooms
+[2026-04-15T10:26:05.659Z] [INFO] [CLIENT_SIDECAR] GUI Click Input Triggered on Button component: [Add Space]
+[2026-04-15T10:26:14.990Z] [INFO] [CLIENT_SIDECAR] GUI Click Input Triggered on Button component: [Save Room]
+[2026-04-15T10:26:17.273Z] [INFO] [CLIENT_SIDECAR] User securely navigated viewport to Route: /rooms
+[2026-04-15T10:26:22.661Z] [INFO] [CLIENT_SIDECAR] GUI Click Input Triggered on Button component: [Icon-only Button]
+[2026-04-15T10:26:26.766Z] [INFO] [CLIENT_SIDECAR] GUI Click Input Triggered on Button component: [Save Changes]
+[2026-04-15T10:26:27.372Z] [SUCCESS] Configuration modified for physical Room space mapping: Plenary Left (ID: ac8fc51c-7b52-4a42-af7a-a065f44bb69f)
+[2026-04-15T10:26:29.043Z] [INFO] [CLIENT_SIDECAR] User securely navigated viewport to Route: /rooms
+[2026-04-15T10:26:33.518Z] [INFO] [CLIENT_SIDECAR] GUI Click Input Triggered on Button component: [Icon-only Button]
+[2026-04-15T10:26:36.315Z] [INFO] [CLIENT_SIDECAR] GUI Navigation Input Triggered on Hyperlink: [Dashboard]
+[2026-04-15T10:26:36.689Z] [INFO] [CLIENT_SIDECAR] User securely navigated viewport to Route: /dashboard
+[2026-04-15T10:26:51.730Z] [INFO] [CLIENT_SIDECAR] GUI Click Input Triggered on Button component: [View All Events]
+[2026-04-15T10:26:52.202Z] [INFO] [CLIENT_SIDECAR] User securely navigated viewport to Route: /calendar
+[2026-04-15T10:26:55.894Z] [INFO] [CLIENT_SIDECAR] GUI Navigation Input Triggered on Hyperlink: [Dashboard]
+[2026-04-15T10:26:56.525Z] [INFO] [CLIENT_SIDECAR] User securely navigated viewport to Route: /dashboard
+[2026-04-15T10:27:04.745Z] [INFO] [CLIENT_SIDECAR] GUI Navigation Input Triggered on Hyperlink: [Calendar]
+[2026-04-15T10:27:05.128Z] [INFO] [CLIENT_SIDECAR] User securely navigated viewport to Route: /calendar
+[2026-04-15T10:27:06.773Z] [INFO] [CLIENT_SIDECAR] GUI Navigation Input Triggered on Hyperlink: [Clients]
+[2026-04-15T10:27:07.099Z] [INFO] [CLIENT_SIDECAR] User securely navigated viewport to Route: /clients
+[2026-04-15T10:27:20.670Z] [INFO] [CLIENT_SIDECAR] User securely navigated viewport to Route: /logs
+[2026-04-15T10:27:44.827Z] [INFO] [CLIENT_SIDECAR] GUI Navigation Input Triggered on Hyperlink: [Dashboard]
+[2026-04-15T10:27:45.239Z] [INFO] [CLIENT_SIDECAR] User securely navigated viewport to Route: /dashboard
+[2026-04-15T10:28:11.472Z] [INFO] [CLIENT_SIDECAR] GUI Click Input Triggered on Button component: [Toggle theme]
+[2026-04-15T10:28:14.420Z] [INFO] [CLIENT_SIDECAR] GUI Navigation Input Triggered on Hyperlink: [Calendar]
+[2026-04-15T10:28:14.918Z] [INFO] [CLIENT_SIDECAR] User securely navigated viewport to Route: /calendar
+[2026-04-15T10:28:16.786Z] [INFO] [CLIENT_SIDECAR] GUI Navigation Input Triggered on Hyperlink: [Dashboard]
+[2026-04-15T10:28:17.276Z] [INFO] [CLIENT_SIDECAR] User securely navigated viewport to Route: /dashboard
+[2026-04-15T10:28:22.602Z] [INFO] [CLIENT_SIDECAR] User securely navigated viewport to Route: /
+[2026-04-15T10:28:24.288Z] [INFO] [CLIENT_SIDECAR] User securely navigated viewport to Route: /logs
+[2026-04-15T10:28:37.205Z] [INFO] [CLIENT_SIDECAR] GUI Navigation Input Triggered on Hyperlink: [Dashboard]
+[2026-04-15T10:28:37.528Z] [INFO] [CLIENT_SIDECAR] User securely navigated viewport to Route: /dashboard
+[2026-04-15T10:28:49.175Z] [INFO] [CLIENT_SIDECAR] GUI Click Input Triggered on Button component: [Toggle theme]
+[2026-04-15T10:33:13.483Z] [INFO] [CLIENT_SIDECAR] GUI Navigation Input Triggered on Hyperlink: [Calendar]
+[2026-04-15T10:33:13.530Z] [INFO] [CLIENT_SIDECAR] GUI Navigation Input Triggered on Hyperlink: [Calendar]
+[2026-04-15T10:33:14.305Z] [INFO] [CLIENT_SIDECAR] User securely navigated viewport to Route: /calendar
+[2026-04-15T10:35:39.534Z] [INFO] [CLIENT_SIDECAR] User securely navigated viewport to Route: /calendar
+[2026-04-15T10:37:40.569Z] [INFO] [CLIENT_SIDECAR] GUI Click Input Triggered on Button component: [Month]
+[2026-04-15T10:37:50.567Z] [INFO] [CLIENT_SIDECAR] GUI Navigation Input Triggered on Hyperlink: [Dashboard]
+[2026-04-15T10:37:51.013Z] [INFO] [CLIENT_SIDECAR] User securely navigated viewport to Route: /dashboard
+[2026-04-15T10:37:55.548Z] [INFO] [CLIENT_SIDECAR] GUI Click Input Triggered on Button component: [Icon-only Button]
+[2026-04-15T10:37:56.317Z] [INFO] [CLIENT_SIDECAR] GUI Click Input Triggered on Button component: [Icon-only Button]
+[2026-04-15T10:56:32.871Z] [INFO] [CLIENT_SIDECAR] GUI Click Input Triggered on Button component: [Icon-only Button]
+[2026-04-15T10:56:42.548Z] [INFO] [CLIENT_SIDECAR] GUI Navigation Input Triggered on Hyperlink: [Edit Event]
+[2026-04-15T10:56:42.937Z] [INFO] [CLIENT_SIDECAR] User securely navigated viewport to Route: /edit-event/2cf35b79-18b2-4bf6-8d7e-1d8b9f05a964
+[2026-04-15T11:04:39.661Z] [INFO] [CLIENT_SIDECAR] GUI Navigation Input Triggered on Hyperlink: [Dashboard]
+[2026-04-15T11:04:40.820Z] [INFO] [CLIENT_SIDECAR] GUI Navigation Input Triggered on Hyperlink: [Dashboard]
+[2026-04-15T11:04:42.883Z] [INFO] [CLIENT_SIDECAR] User securely navigated viewport to Route: /edit-event/2cf35b79-18b2-4bf6-8d7e-1d8b9f05a964
+[2026-04-15T11:04:45.110Z] [INFO] [CLIENT_SIDECAR] GUI Navigation Input Triggered on Hyperlink: [Dashboard]
+[2026-04-15T11:04:45.525Z] [INFO] [CLIENT_SIDECAR] User securely navigated viewport to Route: /dashboard
+[2026-04-15T11:07:58.324Z] [INFO] [CLIENT_SIDECAR] GUI Navigation Input Triggered on Hyperlink: [Calendar]
+[2026-04-15T11:07:58.470Z] [INFO] [CLIENT_SIDECAR] GUI Navigation Input Triggered on Hyperlink: [Calendar]
+[2026-04-15T11:07:58.810Z] [INFO] [CLIENT_SIDECAR] User securely navigated viewport to Route: /calendar
+[2026-04-15T11:08:01.864Z] [INFO] [CLIENT_SIDECAR] GUI Navigation Input Triggered on Hyperlink: [Clients]
+[2026-04-15T11:08:02.299Z] [INFO] [CLIENT_SIDECAR] User securely navigated viewport to Route: /clients
+[2026-04-15T11:08:05.261Z] [INFO] [CLIENT_SIDECAR] GUI Navigation Input Triggered on Hyperlink: [Rooms]
+[2026-04-15T11:08:05.613Z] [INFO] [CLIENT_SIDECAR] User securely navigated viewport to Route: /rooms
+[2026-04-15T11:08:09.489Z] [INFO] [CLIENT_SIDECAR] GUI Click Input Triggered on Button component: [Icon-only Button]
+[2026-04-15T11:08:12.604Z] [INFO] [CLIENT_SIDECAR] GUI Click Input Triggered on Button component: [Save Changes]
+[2026-04-15T11:08:13.205Z] [SUCCESS] Configuration modified for physical Room space mapping: Plenary Left (ID: ac8fc51c-7b52-4a42-af7a-a065f44bb69f)
+[2026-04-15T11:08:14.838Z] [INFO] [CLIENT_SIDECAR] User securely navigated viewport to Route: /rooms
+[2026-04-15T11:08:18.818Z] [INFO] [CLIENT_SIDECAR] GUI Navigation Input Triggered on Hyperlink: [Reports]
+[2026-04-15T11:08:19.344Z] [INFO] [CLIENT_SIDECAR] User securely navigated viewport to Route: /reports
+[2026-04-15T11:08:23.959Z] [INFO] [CLIENT_SIDECAR] GUI Navigation Input Triggered on Hyperlink: [Dashboard]
+[2026-04-15T11:08:24.409Z] [INFO] [CLIENT_SIDECAR] User securely navigated viewport to Route: /dashboard
+[2026-04-15T11:19:19.528Z] [INFO] [CLIENT_SIDECAR] GUI Click Input Triggered on Button component: [Icon-only Button]
+[2026-04-15T11:19:20.756Z] [INFO] [CLIENT_SIDECAR] GUI Navigation Input Triggered on Hyperlink: [Rooms]
+[2026-04-15T11:19:21.105Z] [INFO] [CLIENT_SIDECAR] GUI Navigation Input Triggered on Hyperlink: [Rooms]
+[2026-04-15T11:19:21.579Z] [INFO] [CLIENT_SIDECAR] User securely navigated viewport to Route: /rooms
+[2026-04-15T11:19:23.643Z] [INFO] [CLIENT_SIDECAR] GUI Click Input Triggered on Button component: [Icon-only Button]
+[2026-04-15T11:19:41.559Z] [INFO] [CLIENT_SIDECAR] GUI Click Input Triggered on Button component: [Save Changes]
+[2026-04-15T11:19:42.702Z] [SUCCESS] Configuration modified for physical Room space mapping: Church Hall 1 (ID: 438bb366-82b5-48f5-aa7b-472175f265dd)
+[2026-04-15T11:19:45.216Z] [INFO] [CLIENT_SIDECAR] User securely navigated viewport to Route: /rooms
+[2026-04-15T11:19:47.230Z] [INFO] [CLIENT_SIDECAR] GUI Navigation Input Triggered on Hyperlink: [Dashboard]
+[2026-04-15T11:19:47.628Z] [INFO] [CLIENT_SIDECAR] User securely navigated viewport to Route: /dashboard
+[2026-04-15T11:19:57.168Z] [INFO] [CLIENT_SIDECAR] GUI Click Input Triggered on Button component: [Add Event]
+[2026-04-15T11:19:57.597Z] [INFO] [CLIENT_SIDECAR] User securely navigated viewport to Route: /add-event
+[2026-04-15T11:21:27.628Z] [INFO] [CLIENT_SIDECAR] GUI Navigation Input Triggered on Hyperlink: [Dashboard]
+[2026-04-15T11:22:02.412Z] [INFO] [CLIENT_SIDECAR] GUI Navigation Input Triggered on Hyperlink: [Dashboard]
+[2026-04-15T11:22:03.036Z] [INFO] [CLIENT_SIDECAR] GUI Navigation Input Triggered on Hyperlink: [Dashboard]
+[2026-04-15T11:22:03.076Z] [INFO] [CLIENT_SIDECAR] GUI Navigation Input Triggered on Hyperlink: [EventSync Pro]
+[2026-04-15T11:22:03.516Z] [INFO] [CLIENT_SIDECAR] User securely navigated viewport to Route: /dashboard
+[2026-04-15T11:22:37.798Z] [INFO] [CLIENT_SIDECAR] GUI Click Input Triggered on Button component: [Add Event]
+[2026-04-15T11:22:43.546Z] [INFO] [CLIENT_SIDECAR] User securely navigated viewport to Route: /add-event
+[2026-04-15T11:22:47.699Z] [INFO] [CLIENT_SIDECAR] GUI Navigation Input Triggered on Hyperlink: [Calendar]
+[2026-04-15T11:22:53.390Z] [INFO] [CLIENT_SIDECAR] User securely navigated viewport to Route: /calendar
+[2026-04-15T11:23:42.659Z] [INFO] [CLIENT_SIDECAR] GUI Click Input Triggered on Button component: [New Event]
+[2026-04-15T11:23:48.055Z] [INFO] [CLIENT_SIDECAR] User securely navigated viewport to Route: /add-event
+[2026-04-15T11:26:52.461Z] [INFO] [CLIENT_SIDECAR] GUI Click Input Triggered on Button component: [Schedule Event]
+[2026-04-15T11:26:58.918Z] [SUCCESS] System booked new master timeline Event: 'Youth Events' set for 2026-04-16
+[2026-04-15T11:27:04.737Z] [INFO] Auto-dispatching simulated email receipt to internal client target: info@pceastandrews.org
+[2026-04-15T11:27:23.899Z] [INFO] [CLIENT_SIDECAR] GUI Navigation Input Triggered on Hyperlink: [Dashboard]
+[2026-04-15T11:27:29.547Z] [INFO] [CLIENT_SIDECAR] User securely navigated viewport to Route: /dashboard
+[2026-04-15T11:27:45.618Z] [INFO] [CLIENT_SIDECAR] GUI Click Input Triggered on Button component: [Icon-only Button]
+[2026-04-15T11:27:56.449Z] [INFO] [CLIENT_SIDECAR] GUI Click Input Triggered on Button component: [Icon-only Button]
+[2026-04-15T11:28:02.440Z] [INFO] [CLIENT_SIDECAR] GUI Navigation Input Triggered on Hyperlink: [Calendar]
+[2026-04-15T11:28:07.955Z] [INFO] [CLIENT_SIDECAR] User securely navigated viewport to Route: /calendar
+[2026-04-15T11:28:16.227Z] [INFO] [CLIENT_SIDECAR] GUI Click Input Triggered on Button component: [A]
+[2026-04-15T11:28:16.633Z] [INFO] [CLIENT_SIDECAR] User securely navigated viewport to Route: /edit-event/70b26cc1-2f3c-4c84-81b7-02c094bdc053
+[2026-04-15T11:28:19.463Z] [INFO] [CLIENT_SIDECAR] GUI Click Input Triggered on Button component: [Sign out]
+[2026-04-15T11:28:22.354Z] [INFO] [CLIENT_SIDECAR] GUI Click Input Triggered on Button component: [Icon-only Button]
+[2026-04-15T11:29:41.426Z] [INFO] [CLIENT_SIDECAR] GUI Click Input Triggered on Button component: [Save Event]
+[2026-04-15T11:29:42.309Z] [WARN] Operator manually mutated configuration for Event record 'Youth Events' (UUID: 70b26cc1-2f3c-4c84-81b7-02c094bdc053)
+[2026-04-15T11:29:44.963Z] [INFO] [CLIENT_SIDECAR] User securely navigated viewport to Route: /calendar
+[2026-04-15T11:29:46.013Z] [INFO] [CLIENT_SIDECAR] GUI Click Input Triggered on Button component: [A]
+[2026-04-15T11:29:47.601Z] [INFO] [CLIENT_SIDECAR] GUI Click Input Triggered on Button component: [Sign out]
+[2026-04-15T11:29:51.164Z] [INFO] [CLIENT_SIDECAR] GUI Click Input Triggered on Button component: [A]
+[2026-04-15T11:29:52.357Z] [INFO] [CLIENT_SIDECAR] GUI Click Input Triggered on Button component: [Sign out]
+[2026-04-15T11:30:00.809Z] [INFO] [CLIENT_SIDECAR] User securely navigated viewport to Route: /
+[2026-04-15T11:30:46.798Z] [INFO] [CLIENT_SIDECAR] GUI Navigation Input Triggered on Hyperlink: [IGNITE Worship Experienceevent2026-05-01]
+[2026-04-15T11:30:47.878Z] [INFO] [CLIENT_SIDECAR] User securely navigated viewport to Route: /calendar
+[2026-04-15T11:30:51.152Z] [INFO] [CLIENT_SIDECAR] GUI Navigation Input Triggered on Hyperlink: [Dashboard]
+[2026-04-15T11:30:51.687Z] [INFO] [CLIENT_SIDECAR] User securely navigated viewport to Route: /dashboard
+[2026-04-15T11:31:31.268Z] [INFO] [CLIENT_SIDECAR] GUI Click Input Triggered on Button component: [Icon-only Button]
+[2026-04-15T11:31:35.084Z] [INFO] [CLIENT_SIDECAR] GUI Click Input Triggered on Button component: [Icon-only Button]
+[2026-04-15T11:31:37.557Z] [INFO] [CLIENT_SIDECAR] GUI Click Input Triggered on Button component: [Icon-only Button]
+[2026-04-15T11:31:40.433Z] [INFO] [CLIENT_SIDECAR] GUI Click Input Triggered on Button component: [Icon-only Button]
+[2026-04-15T11:31:42.337Z] [INFO] [CLIENT_SIDECAR] GUI Click Input Triggered on Button component: [View All Events]
+[2026-04-15T11:31:42.847Z] [INFO] [CLIENT_SIDECAR] User securely navigated viewport to Route: /calendar
+[2026-04-15T11:31:47.030Z] [INFO] [CLIENT_SIDECAR] GUI Click Input Triggered on Button component: [Icon-only Button]
+[2026-04-15T11:31:48.588Z] [INFO] [CLIENT_SIDECAR] GUI Click Input Triggered on Button component: [Month]
+[2026-04-15T11:32:12.438Z] [INFO] [CLIENT_SIDECAR] GUI Navigation Input Triggered on Hyperlink: [Clients]
+[2026-04-15T11:32:35.341Z] [INFO] [CLIENT_SIDECAR] GUI Navigation Input Triggered on Hyperlink: [Rooms]
+[2026-04-15T11:33:51.044Z] [INFO] [CLIENT_SIDECAR] GUI Click Input Triggered on Button component: [Month]
+[2026-04-15T11:33:51.348Z] [INFO] [CLIENT_SIDECAR] GUI Click Input Triggered on Button component: [Icon-only Button]
+[2026-04-15T11:33:51.408Z] [INFO] [CLIENT_SIDECAR] GUI Navigation Input Triggered on Hyperlink: [Clients]
+[2026-04-15T11:33:51.765Z] [INFO] [CLIENT_SIDECAR] User securely navigated viewport to Route: /clients
+[2026-04-15T11:35:03.054Z] [INFO] [CLIENT_SIDECAR] GUI Navigation Input Triggered on Hyperlink: [Dashboard]
+[2026-04-15T11:54:34.553Z] [INFO] [CLIENT_SIDECAR] GUI Navigation Input Triggered on Hyperlink: [Dashboard]
+[2026-04-15T11:54:36.013Z] [INFO] [CLIENT_SIDECAR] User securely navigated viewport to Route: /dashboard
+[2026-04-15T11:55:07.438Z] [INFO] [CLIENT_SIDECAR] GUI Click Input Triggered on Button component: [Icon-only Button]
+[2026-04-15T11:55:24.356Z] [INFO] [CLIENT_SIDECAR] GUI Click Input Triggered on Button component: [Icon-only Button]
+[2026-04-15T11:55:24.911Z] [INFO] [CLIENT_SIDECAR] GUI Click Input Triggered on Button component: [Icon-only Button]
+[2026-04-15T11:55:25.278Z] [INFO] [CLIENT_SIDECAR] GUI Click Input Triggered on Button component: [A]
+[2026-04-15T11:55:25.603Z] [INFO] [CLIENT_SIDECAR] GUI Click Input Triggered on Button component: [A]
+[2026-04-15T11:58:58.128Z] [INFO] [CLIENT_SIDECAR] User securely navigated viewport to Route: /dashboard
+[2026-04-15T11:59:07.886Z] [INFO] [CLIENT_SIDECAR] GUI Click Input Triggered on Button component: [Icon-only Button]
+[2026-04-15T11:59:10.697Z] [INFO] [CLIENT_SIDECAR] GUI Navigation Input Triggered on Hyperlink: [Rooms]
+[2026-04-15T11:59:11.386Z] [INFO] [CLIENT_SIDECAR] User securely navigated viewport to Route: /rooms
+[2026-04-15T11:59:16.720Z] [INFO] [CLIENT_SIDECAR] GUI Navigation Input Triggered on Hyperlink: [Dashboard]
+[2026-04-15T12:03:16.955Z] [INFO] [CLIENT_SIDECAR] GUI Navigation Input Triggered on Hyperlink: [Calendar]
+[2026-04-15T12:03:17.428Z] [INFO] [CLIENT_SIDECAR] User securely navigated viewport to Route: /calendar
+[2026-04-15T12:03:19.609Z] [INFO] [CLIENT_SIDECAR] GUI Navigation Input Triggered on Hyperlink: [Dashboard]
+[2026-04-15T12:03:20.088Z] [INFO] [CLIENT_SIDECAR] User securely navigated viewport to Route: /dashboard
+[2026-04-15T12:03:24.750Z] [INFO] [CLIENT_SIDECAR] GUI Navigation Input Triggered on Hyperlink: [Settings]
+[2026-04-15T12:03:25.148Z] [INFO] [CLIENT_SIDECAR] User securely navigated viewport to Route: /settings
+[2026-04-15T12:05:29.357Z] [INFO] [CLIENT_SIDECAR] GUI Navigation Input Triggered on Hyperlink: [Dashboard]
+[2026-04-15T12:05:29.884Z] [INFO] [CLIENT_SIDECAR] User securely navigated viewport to Route: /dashboard
+[2026-04-15T12:07:36.681Z] [INFO] [CLIENT_SIDECAR] User securely navigated viewport to Route: /logs
+[2026-04-15T12:07:37.193Z] [INFO] [CLIENT_SIDECAR] User securely navigated viewport to Route: /logs
+[2026-04-15T12:08:41.145Z] [INFO] [CLIENT_SIDECAR] GUI Navigation Input Triggered on Hyperlink: [Dashboard]
+[2026-04-15T12:08:41.525Z] [INFO] [CLIENT_SIDECAR] User securely navigated viewport to Route: /dashboard
+[2026-04-15T12:08:54.983Z] [INFO] [CLIENT_SIDECAR] GUI Click Input Triggered on Button component: [A]
+[2026-04-15T12:08:56.257Z] [INFO] [CLIENT_SIDECAR] GUI Click Input Triggered on Button component: [Sign out]
+[2026-04-15T12:09:06.414Z] [INFO] [CLIENT_SIDECAR] User securely navigated viewport to Route: /
+[2026-04-15T12:17:08.199Z] [INFO] [CLIENT_SIDECAR] GUI Navigation Input Triggered on Hyperlink: [Admin Login]
+[2026-04-15T12:17:08.347Z] [INFO] [CLIENT_SIDECAR] User securely navigated viewport to Route: /login
+[2026-04-15T12:17:25.012Z] [INFO] [CLIENT_SIDECAR] User securely navigated viewport to Route: /
+[2026-04-15T12:20:10.208Z] [INFO] [CLIENT_SIDECAR] User securely navigated viewport to Route: /
+[2026-04-15T12:20:12.936Z] [INFO] [CLIENT_SIDECAR] User securely navigated viewport to Route: /login
+[2026-04-15T12:20:34.148Z] [INFO] [CLIENT_SIDECAR] User securely navigated viewport to Route: /
+[2026-04-15T12:40:37.514Z] [INFO] [CLIENT_SIDECAR] GUI Navigation Input Triggered on Hyperlink: [Admin Login]
+[2026-04-15T12:40:37.629Z] [INFO] [CLIENT_SIDECAR] User securely navigated viewport to Route: /login
+[2026-04-15T12:40:40.587Z] [INFO] [CLIENT_SIDECAR] User securely navigated viewport to Route: /
