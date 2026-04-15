@@ -247,3 +247,47 @@
 [2026-04-15T13:37:24.562Z] [INFO] [CLIENT_SIDECAR] User securely navigated viewport to Route: /dashboard
 [2026-04-15T13:37:29.324Z] [INFO] [CLIENT_SIDECAR] GUI Click Input Triggered on Button component: [View All Events]
 [2026-04-15T13:37:29.732Z] [INFO] [CLIENT_SIDECAR] User securely navigated viewport to Route: /calendar
+[2026-04-15T13:40:02.306Z] [INFO] [CLIENT_SIDECAR] GUI Navigation Input Triggered on Hyperlink: [Dashboard]
+[2026-04-15T13:40:02.672Z] [INFO] [CLIENT_SIDECAR] User securely navigated viewport to Route: /dashboard
+[2026-04-15T13:40:04.657Z] [INFO] [CLIENT_SIDECAR] GUI Navigation Input Triggered on Hyperlink: [Calendar]
+[2026-04-15T13:40:05.062Z] [INFO] [CLIENT_SIDECAR] User securely navigated viewport to Route: /calendar
+[2026-04-15T13:40:07.220Z] [INFO] [CLIENT_SIDECAR] GUI Click Input Triggered on Button component: [Week]
+[2026-04-15T13:40:10.248Z] [INFO] [CLIENT_SIDECAR] GUI Click Input Triggered on Button component: [Day]
+[2026-04-15T13:40:10.842Z] [INFO] [CLIENT_SIDECAR] GUI Click Input Triggered on Button component: [Agenda]
+[2026-04-15T13:40:13.318Z] [INFO] [CLIENT_SIDECAR] GUI Click Input Triggered on Button component: [Month]
+[2026-04-15T13:40:14.294Z] [INFO] [CLIENT_SIDECAR] GUI Navigation Input Triggered on Hyperlink: [Dashboard]
+[2026-04-15T13:40:14.921Z] [INFO] [CLIENT_SIDECAR] User securely navigated viewport to Route: /dashboard
+[2026-04-15T13:56:15.973Z] [INFO] [CLIENT_SIDECAR] GUI Click Input Triggered on Button component: [Toggle theme]
+[2026-04-15T13:56:16.282Z] [INFO] [CLIENT_SIDECAR] GUI Click Input Triggered on Button component: [Toggle theme]
+[2026-04-15T13:56:30.951Z] [INFO] [CLIENT_SIDECAR] GUI Click Input Triggered on Button component: [Icon-only Button]
+[2026-04-15T13:56:31.481Z] [INFO] [CLIENT_SIDECAR] GUI Click Input Triggered on Button component: [Icon-only Button]
+[2026-04-15T13:56:32.426Z] [INFO] [CLIENT_SIDECAR] GUI Click Input Triggered on Button component: [Toggle theme]
+[2026-04-15T13:56:33.163Z] [INFO] [CLIENT_SIDECAR] GUI Click Input Triggered on Button component: [Toggle theme]
+[2026-04-15T13:56:33.849Z] [INFO] [CLIENT_SIDECAR] GUI Click Input Triggered on Button component: [A]
+[2026-04-15T13:56:43.178Z] [INFO] [CLIENT_SIDECAR] GUI Navigation Input Triggered on Hyperlink: [Calendar]
+[2026-04-15T13:56:43.595Z] [INFO] [CLIENT_SIDECAR] User securely navigated viewport to Route: /calendar
+[2026-04-15T13:56:46.064Z] [INFO] [CLIENT_SIDECAR] GUI Click Input Triggered on Button component: [Week]
+[2026-04-15T13:56:48.065Z] [INFO] [CLIENT_SIDECAR] GUI Click Input Triggered on Button component: [Month]
+[2026-04-15T13:56:52.770Z] [INFO] [CLIENT_SIDECAR] GUI Navigation Input Triggered on Hyperlink: [Clients]
+[2026-04-15T13:56:53.079Z] [INFO] [CLIENT_SIDECAR] User securely navigated viewport to Route: /clients
+[2026-04-15T13:56:56.753Z] [INFO] [CLIENT_SIDECAR] GUI Navigation Input Triggered on Hyperlink: [Rooms]
+[2026-04-15T13:56:57.078Z] [INFO] [CLIENT_SIDECAR] User securely navigated viewport to Route: /rooms
+[2026-04-15T13:56:59.172Z] [INFO] [CLIENT_SIDECAR] GUI Navigation Input Triggered on Hyperlink: [Reports]
+[2026-04-15T13:56:59.500Z] [INFO] [CLIENT_SIDECAR] User securely navigated viewport to Route: /reports
+[2026-04-15T13:57:02.271Z] [INFO] [CLIENT_SIDECAR] GUI Navigation Input Triggered on Hyperlink: [Dashboard]
+[2026-04-15T13:57:02.833Z] [INFO] [CLIENT_SIDECAR] User securely navigated viewport to Route: /dashboard
+[2026-04-15T13:57:20.981Z] [INFO] [CLIENT_SIDECAR] GUI Navigation Input Triggered on Hyperlink: [Calendar]
+[2026-04-15T13:57:21.305Z] [INFO] [CLIENT_SIDECAR] User securely navigated viewport to Route: /calendar
+[2026-04-15T13:57:28.285Z] [INFO] [CLIENT_SIDECAR] GUI Navigation Input Triggered on Hyperlink: [Dashboard]
+[2026-04-15T13:57:28.614Z] [INFO] [CLIENT_SIDECAR] User securely navigated viewport to Route: /dashboard
+[2026-04-15T13:57:29.879Z] [INFO] [CLIENT_SIDECAR] GUI Navigation Input Triggered on Hyperlink: [Calendar]
+[2026-04-15T13:57:30.724Z] [INFO] [CLIENT_SIDECAR] User securely navigated viewport to Route: /calendar
+[2026-04-15T13:57:31.355Z] [INFO] [CLIENT_SIDECAR] GUI Click Input Triggered on Button component: [Agenda]
+[2026-04-15T13:57:36.520Z] [INFO] [CLIENT_SIDECAR] GUI Navigation Input Triggered on Hyperlink: [Dashboard]
+[2026-04-15T13:57:36.925Z] [INFO] [CLIENT_SIDECAR] User securely navigated viewport to Route: /dashboard
+[2026-04-15T13:57:44.356Z] [INFO] [CLIENT_SIDECAR] GUI Click Input Triggered on Button component: [Icon-only Button]
+[2026-04-15T13:57:47.745Z] [INFO] [CLIENT_SIDECAR] GUI Click Input Triggered on Button component: [Icon-only Button]
+[2026-04-15T13:57:54.523Z] [INFO] [CLIENT_SIDECAR] GUI Navigation Input Triggered on Hyperlink: [Clients]
+[2026-04-15T13:57:54.957Z] [INFO] [CLIENT_SIDECAR] User securely navigated viewport to Route: /clients
+[2026-04-15T13:58:23.156Z] [INFO] [CLIENT_SIDECAR] GUI Click Input Triggered on Button component: [Add Client]
+[2026-04-15T13:58:24.844Z] [INFO] [CLIENT_SIDECAR] GUI Click Input Triggered on Button component: [Icon-only Button]
