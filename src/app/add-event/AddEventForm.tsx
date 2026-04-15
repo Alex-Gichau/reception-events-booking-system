@@ -62,13 +62,23 @@ export default function AddEventForm({ clients, rooms }: { clients: any[], rooms
               <option key={r.id} value={r.id}>{r.name} (Cap: {r.capacity})</option>
             ))}
           </select>
+          {roomId !== "none" && (
+            <div className="mt-1.5 px-2 py-1 bg-indigo-50 dark:bg-indigo-900/30 rounded border border-indigo-100 dark:border-indigo-800 text-[11px] font-medium text-indigo-700 dark:text-indigo-300 animate-in fade-in slide-in-from-left-1">
+              Recommended Charge: {rooms.find(r => r.id === roomId)?.min_price?.toLocaleString()} - {rooms.find(r => r.id === roomId)?.max_price?.toLocaleString()} KSh
+            </div>
+          )}
         </div>
       </div>
       
-      {roomId === "none" && (
+      {roomId === "none" ? (
         <div className="animate-in fade-in slide-in-from-top-2 duration-300">
           <Label htmlFor="location">External / Custom Location</Label>
           <Input id="location" name="location" type="text" placeholder="e.g. Virtual Zoom Link or external address" />
+        </div>
+      ) : (
+        <div className="animate-in fade-in slide-in-from-top-2 duration-300 max-w-xs">
+          <Label htmlFor="total_cost">Agreed Event Charge (KSh)</Label>
+          <Input id="total_cost" name="total_cost" type="number" placeholder="Enter amount in shillings" defaultValue={rooms.find(r => r.id === roomId)?.min_price || 0} />
         </div>
       )}
 

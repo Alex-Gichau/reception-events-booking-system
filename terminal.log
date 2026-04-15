@@ -188,3 +188,62 @@
 [2026-04-15T12:40:37.514Z] [INFO] [CLIENT_SIDECAR] GUI Navigation Input Triggered on Hyperlink: [Admin Login]
 [2026-04-15T12:40:37.629Z] [INFO] [CLIENT_SIDECAR] User securely navigated viewport to Route: /login
 [2026-04-15T12:40:40.587Z] [INFO] [CLIENT_SIDECAR] User securely navigated viewport to Route: /
+[2026-04-15T12:50:15.820Z] [INFO] [CLIENT_SIDECAR] GUI Navigation Input Triggered on Hyperlink: [Admin Login]
+[2026-04-15T12:50:15.974Z] [INFO] [CLIENT_SIDECAR] User securely navigated viewport to Route: /login
+[2026-04-15T12:50:58.861Z] [INFO] [CLIENT_SIDECAR] User securely navigated viewport to Route: /
+[2026-04-15T12:51:05.742Z] [INFO] [CLIENT_SIDECAR] User securely navigated viewport to Route: /
+[2026-04-15T12:51:08.135Z] [INFO] [CLIENT_SIDECAR] User securely navigated viewport to Route: /
+[2026-04-15T13:28:20.217Z] [INFO] [CLIENT_SIDECAR] User securely navigated viewport to Route: /
+[2026-04-15T13:28:25.601Z] [INFO] [CLIENT_SIDECAR] GUI Navigation Input Triggered on Hyperlink: [Admin Login]
+[2026-04-15T13:28:25.992Z] [INFO] [CLIENT_SIDECAR] User securely navigated viewport to Route: /login
+[2026-04-15T13:28:29.120Z] [INFO] [CLIENT_SIDECAR] GUI Click Input Triggered on Button component: [Sign in with Google]
+[2026-04-15T13:28:33.761Z] [INFO] [CLIENT_SIDECAR] User securely navigated viewport to Route: /login
+[2026-04-15T13:28:43.315Z] [INFO] [CLIENT_SIDECAR] GUI Click Input Triggered on Button component: [Sign In]
+[2026-04-15T13:28:46.745Z] [INFO] [CLIENT_SIDECAR] User securely navigated viewport to Route: /
+[2026-04-15T13:28:58.851Z] [INFO] [CLIENT_SIDECAR] GUI Navigation Input Triggered on Hyperlink: [Admin Login]
+[2026-04-15T13:28:59.552Z] [INFO] [CLIENT_SIDECAR] User securely navigated viewport to Route: /dashboard
+[2026-04-15T13:29:04.669Z] [INFO] [CLIENT_SIDECAR] GUI Click Input Triggered on Button component: [Icon-only Button]
+[2026-04-15T13:29:17.660Z] [INFO] [CLIENT_SIDECAR] GUI Navigation Input Triggered on Hyperlink: [Calendar]
+[2026-04-15T13:29:18.234Z] [INFO] [CLIENT_SIDECAR] GUI Click Input Triggered on Button component: [Edit]
+[2026-04-15T13:29:23.867Z] [INFO] [CLIENT_SIDECAR] GUI Navigation Input Triggered on Hyperlink: [Edit Event]
+[2026-04-15T13:29:24.886Z] [INFO] [CLIENT_SIDECAR] User securely navigated viewport to Route: /edit-event/70b26cc1-2f3c-4c84-81b7-02c094bdc053
+[2026-04-15T13:29:42.896Z] [INFO] [CLIENT_SIDECAR] GUI Click Input Triggered on Button component: [Save Event]
+[2026-04-15T13:29:43.972Z] [WARN] Operator manually mutated configuration for Event record 'Youth Events' (UUID: 70b26cc1-2f3c-4c84-81b7-02c094bdc053)
+[2026-04-15T13:29:47.722Z] [INFO] [CLIENT_SIDECAR] User securely navigated viewport to Route: /calendar
+[2026-04-15T13:31:30.331Z] [WARN] Administrative action forcibly wiped Event Record (UUID: 70b26cc1-2f3c-4c84-81b7-02c094bdc053) completely off grid
+[2026-04-15T13:31:31.157Z] [INFO] [CLIENT_SIDECAR] GUI Navigation Input Triggered on Hyperlink: [Modify Details]
+[2026-04-15T13:31:31.427Z] [INFO] [CLIENT_SIDECAR] GUI Click Input Triggered on Button component: [Delete]
+[2026-04-15T13:31:32.775Z] [INFO] [CLIENT_SIDECAR] User securely navigated viewport to Route: /edit-event/70b26cc1-2f3c-4c84-81b7-02c094bdc053
+[2026-04-15T13:31:45.135Z] [INFO] [CLIENT_SIDECAR] User securely navigated viewport to Route: /
+[2026-04-15T13:31:49.673Z] [INFO] [CLIENT_SIDECAR] GUI Navigation Input Triggered on Hyperlink: [Admin Login]
+[2026-04-15T13:31:50.093Z] [INFO] [CLIENT_SIDECAR] User securely navigated viewport to Route: /dashboard
+[2026-04-15T13:31:56.541Z] [INFO] [CLIENT_SIDECAR] GUI Navigation Input Triggered on Hyperlink: [Calendar]
+[2026-04-15T13:31:56.871Z] [INFO] [CLIENT_SIDECAR] User securely navigated viewport to Route: /calendar
+[2026-04-15T13:32:08.533Z] [INFO] [CLIENT_SIDECAR] GUI Click Input Triggered on Button component: [Export PDF]
+[2026-04-15T13:32:19.070Z] [INFO] [CLIENT_SIDECAR] GUI Click Input Triggered on Button component: [Icon-only Button]
+[2026-04-15T13:32:21.913Z] [INFO] [CLIENT_SIDECAR] GUI Click Input Triggered on Button component: [Icon-only Button]
+[2026-04-15T13:32:25.592Z] [INFO] [CLIENT_SIDECAR] GUI Navigation Input Triggered on Hyperlink: [Settings]
+[2026-04-15T13:32:26.204Z] [INFO] [CLIENT_SIDECAR] GUI Navigation Input Triggered on Hyperlink: [Settings]
+[2026-04-15T13:32:26.637Z] [INFO] [CLIENT_SIDECAR] User securely navigated viewport to Route: /settings
+[2026-04-15T13:33:57.039Z] [INFO] [CLIENT_SIDECAR] User securely navigated viewport to Route: /settings
+[2026-04-15T13:34:01.820Z] [INFO] [CLIENT_SIDECAR] GUI Navigation Input Triggered on Hyperlink: [Reports]
+[2026-04-15T13:34:02.532Z] [INFO] [CLIENT_SIDECAR] User securely navigated viewport to Route: /reports
+[2026-04-15T13:34:03.662Z] [INFO] [CLIENT_SIDECAR] GUI Navigation Input Triggered on Hyperlink: [Dashboard]
+[2026-04-15T13:34:04.030Z] [INFO] [CLIENT_SIDECAR] User securely navigated viewport to Route: /dashboard
+[2026-04-15T13:34:11.952Z] [INFO] [CLIENT_SIDECAR] GUI Navigation Input Triggered on Hyperlink: [Calendar]
+[2026-04-15T13:34:12.342Z] [INFO] [CLIENT_SIDECAR] User securely navigated viewport to Route: /calendar
+[2026-04-15T13:34:19.883Z] [INFO] [CLIENT_SIDECAR] GUI Click Input Triggered on Button component: [Month]
+[2026-04-15T13:36:11.150Z] [INFO] [CLIENT_SIDECAR] User securely navigated viewport to Route: /calendar
+[2026-04-15T13:36:13.123Z] [INFO] [CLIENT_SIDECAR] User securely navigated viewport to Route: /calendar
+[2026-04-15T13:36:54.114Z] [INFO] [CLIENT_SIDECAR] GUI Click Input Triggered on Button component: [Icon-only Button]
+[2026-04-15T13:36:55.780Z] [INFO] [CLIENT_SIDECAR] GUI Navigation Input Triggered on Hyperlink: [Dashboard]
+[2026-04-15T13:36:56.127Z] [INFO] [CLIENT_SIDECAR] User securely navigated viewport to Route: /dashboard
+[2026-04-15T13:37:02.940Z] [INFO] [CLIENT_SIDECAR] GUI Navigation Input Triggered on Hyperlink: [Calendar]
+[2026-04-15T13:37:03.362Z] [INFO] [CLIENT_SIDECAR] User securely navigated viewport to Route: /calendar
+[2026-04-15T13:37:09.646Z] [INFO] [CLIENT_SIDECAR] GUI Click Input Triggered on Button component: [Export PDF]
+[2026-04-15T13:37:19.956Z] [INFO] [CLIENT_SIDECAR] GUI Click Input Triggered on Button component: [Icon-only Button]
+[2026-04-15T13:37:22.370Z] [INFO] [CLIENT_SIDECAR] GUI Click Input Triggered on Button component: [Toggle theme]
+[2026-04-15T13:37:24.243Z] [INFO] [CLIENT_SIDECAR] GUI Navigation Input Triggered on Hyperlink: [Dashboard]
+[2026-04-15T13:37:24.562Z] [INFO] [CLIENT_SIDECAR] User securely navigated viewport to Route: /dashboard
+[2026-04-15T13:37:29.324Z] [INFO] [CLIENT_SIDECAR] GUI Click Input Triggered on Button component: [View All Events]
+[2026-04-15T13:37:29.732Z] [INFO] [CLIENT_SIDECAR] User securely navigated viewport to Route: /calendar

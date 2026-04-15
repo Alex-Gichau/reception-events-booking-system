@@ -9,7 +9,7 @@ import { deleteEvent } from "@/app/actions/events"
 import { useRouter } from "next/navigation"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { X, Clock, MapPin, AlignLeft, User, Plus, Printer } from "lucide-react"
+import { X, Clock, MapPin, AlignLeft, User, Plus, Printer, Banknote } from "lucide-react"
 import jsPDF from "jspdf"
 import autoTable from "jspdf-autotable"
 
@@ -21,12 +21,14 @@ interface BigEvent extends RBCEvent {
   color: string;
   description?: string;
   location?: string;
+  total_cost?: number;
 }
 
 export default function CalendarClient({ initialEvents }: { initialEvents: BigEvent[] }) {
   const router = useRouter()
   const [events, setEvents] = React.useState<BigEvent[]>(initialEvents)
   const [selectedEvent, setSelectedEvent] = React.useState<BigEvent | null>(null)
+  const [view, setView] = React.useState<'month' | 'week' | 'day' | 'agenda'>('month')
   
   // Track viewport boundary dynamically to strictly export what the user is safely viewing
   const [currentRange, setCurrentRange] = React.useState<{ start: Date, end: Date }>({
@@ -112,7 +114,7 @@ export default function CalendarClient({ initialEvents }: { initialEvents: BigEv
   }
 
   return (
-    <div className="flex-1 flex flex-col p-4 md:p-6 w-full h-full relative">
+    <div className="flex-1 flex flex-col p-4 md:p-6 w-full h-full">
       <style>{`
         /* Overriding default react-big-calendar styles to match our modern tailwind UI */
         .rbc-calendar { font-family: inherit; }
@@ -127,24 +129,45 @@ export default function CalendarClient({ initialEvents }: { initialEvents: BigEv
         .dark .rbc-month-view, .dark .rbc-time-view, .dark .rbc-agenda-view { background: #0f172a; border-color: #334155; }
         .rbc-day-bg + .rbc-day-bg, .rbc-month-row + .rbc-month-row, .rbc-header + .rbc-header { border-color: #e2e8f0; }
         .dark .rbc-day-bg + .rbc-day-bg, .dark .rbc-month-row + .rbc-month-row, .dark .rbc-header + .rbc-header { border-color: #334155; }
-        .rbc-toolbar { margin-bottom: 1.5rem; }
-        .rbc-toolbar-label { font-size: 1.25rem; font-weight: 700; color: #1e293b; }
-        .dark .rbc-toolbar-label { color: #f8fafc; }
+        .rbc-toolbar { display: none !important; }
         .dark .rbc-btn-group button { border-color: #334155; color: #94a3b8; }
         .dark .rbc-btn-group button:hover { background-color: #1e293b; }
         .dark .rbc-btn-group button.rbc-active { background-color: #334155; color: #f8fafc; }
+        .dark .rbc-header { color: #94a3b8; border-color: #334155; }
+        .rbc-off-range-bg { background: #f8fafc; }
+        .dark .rbc-off-range-bg { background: #0f172a; }
       `}</style>
 
-      {/* Floating Action Menu */}
-      <div className="absolute top-6 right-6 md:right-8 z-10 flex gap-2">
-        <Button onClick={exportPDF} variant="outline" className="bg-white border-slate-200 text-slate-700 hover:bg-slate-50 shadow-sm rounded-lg hidden sm:flex">
-          <Printer className="mr-2 h-4 w-4 text-slate-500" /> Export PDF
-        </Button>
-        <Link href="/add-event">
-          <Button className="bg-indigo-600 hover:bg-indigo-700 text-white shadow-md rounded-lg">
-            <Plus className="mr-2 h-4 w-4" /> New Event
+      {/* ── Page Header Row ── */}
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-4">
+        {/* View switcher tabs */}
+        <div className="flex items-center bg-gray-100 dark:bg-slate-800 rounded-lg p-1 gap-0.5">
+          {(['month', 'week', 'day', 'agenda'] as const).map((v) => (
+            <button
+              key={v}
+              onClick={() => setView(v)}
+              className={`px-3 py-1.5 text-sm font-medium rounded-md capitalize transition-all ${
+                view === v
+                  ? 'bg-white dark:bg-slate-700 text-indigo-600 dark:text-indigo-400 shadow-sm'
+                  : 'text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'
+              }`}
+            >
+              {v}
+            </button>
+          ))}
+        </div>
+
+        {/* Action buttons */}
+        <div className="flex gap-2">
+          <Button onClick={exportPDF} variant="outline" className="border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 bg-white dark:bg-slate-800 hover:bg-slate-50 dark:hover:bg-slate-700 shadow-sm rounded-lg">
+            <Printer className="mr-2 h-4 w-4" /> Export PDF
           </Button>
-        </Link>
+          <Link href="/add-event">
+            <Button className="bg-indigo-600 hover:bg-indigo-700 text-white shadow-md rounded-lg">
+              <Plus className="mr-2 h-4 w-4" /> New Event
+            </Button>
+          </Link>
+        </div>
       </div>
 
       <div className="flex-1 bg-white dark:bg-slate-900 rounded-xl overflow-hidden h-full">
@@ -155,6 +178,9 @@ export default function CalendarClient({ initialEvents }: { initialEvents: BigEv
           endAccessor="end"
           style={{ height: '100%' }}
           views={['month', 'week', 'day', 'agenda']}
+          view={view}
+          onView={(v: any) => setView(v)}
+          defaultView="month"
           onSelectEvent={handleSelectEvent}
           eventPropGetter={eventStyleGetter}
           onRangeChange={(range: any) => {

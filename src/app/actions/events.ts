@@ -17,6 +17,7 @@ export async function addEvent(formData: FormData) {
   const client_id = formData.get("client_id")?.toString() || null
   const poster_url = formData.get("poster_url")?.toString() || null
   const location = formData.get("location")?.toString() || null
+  const total_cost = parseFloat(formData.get("total_cost") as string) || 0
 
   // Physical Room Booking Conflict Resolution
   if (room_id && room_id !== "none" && date && start_time && end_time) {
@@ -43,6 +44,7 @@ export async function addEvent(formData: FormData) {
       description,
       poster_url,
       location,
+      total_cost,
       room_id: room_id === "none" ? null : room_id,
       client_id: client_id === "none" ? null : client_id,
       duration_hours: 1,
@@ -114,6 +116,7 @@ export async function updateEvent(eventId: number | string, formData: FormData) 
   const client_id = formData.get("client_id")?.toString() || null
   const poster_url = formData.get("poster_url")?.toString() || null
   const location = formData.get("location")?.toString() || null
+  const total_cost = parseFloat(formData.get("total_cost") as string) || 0
 
   const { data, error } = await supabase
     .from("events")
@@ -125,6 +128,7 @@ export async function updateEvent(eventId: number | string, formData: FormData) 
       description,
       poster_url,
       location,
+      total_cost,
       room_id: room_id === "none" ? null : room_id,
       client_id: client_id === "none" ? null : client_id,
     })

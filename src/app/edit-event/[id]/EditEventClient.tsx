@@ -72,15 +72,27 @@ export default function EditEventClient({ event, clients, rooms }: { event: any,
               <option key={r.id} value={r.id}>{r.name} (Cap: {r.capacity})</option>
             ))}
           </select>
+          {roomId !== "none" && (
+            <div className="mt-1.5 px-2 py-1 bg-indigo-50 dark:bg-indigo-900/30 rounded border border-indigo-100 dark:border-indigo-800 text-[11px] font-medium text-indigo-700 dark:text-indigo-300 animate-in fade-in slide-in-from-left-1">
+              Recommended Charge: {rooms.find(r => r.id === roomId)?.min_price?.toLocaleString()} - {rooms.find(r => r.id === roomId)?.max_price?.toLocaleString()} KSh
+            </div>
+          )}
         </div>
       </div>
       
-      {roomId === "none" && (
-        <div className="animate-in fade-in slide-in-from-top-2 duration-300">
-          <Label htmlFor="location">External / Custom Location</Label>
-          <Input id="location" name="location" type="text" defaultValue={event.location || ""} placeholder="e.g. Virtual Zoom Link or external address" />
-        </div>
-      )}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-end">
+        {roomId === "none" ? (
+          <div className="animate-in fade-in slide-in-from-top-2 duration-300">
+            <Label htmlFor="location">External / Custom Location</Label>
+            <Input id="location" name="location" type="text" defaultValue={event.location || ""} placeholder="e.g. Virtual Zoom Link or external address" />
+          </div>
+        ) : (
+          <div className="animate-in fade-in slide-in-from-top-2 duration-300">
+            <Label htmlFor="total_cost">Agreed Event Charge (KSh)</Label>
+            <Input id="total_cost" name="total_cost" type="number" defaultValue={event.total_cost || 0} placeholder="Enter amount in shillings" />
+          </div>
+        )}
+      </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         <div>

@@ -51,7 +51,6 @@ export default function Navbar() {
     { href: "/clients", label: "Clients" },
     { href: "/rooms", label: "Rooms" },
     { href: "/reports", label: "Reports" },
-    { href: "/settings", label: "Settings" },
   ];
 
   const getInitials = () => {
