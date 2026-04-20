@@ -97,9 +97,9 @@ export default function CalendarClient({ initialEvents }: { initialEvents: BigEv
 
     const tableData = visibleEvents.map(e => [
       moment(e.start).format('MMM Do, h:mm a'),
-      e.title,
-      e.location || 'TBD',
-      e.description?.substring(0, 45) || ''
+      String(e.title),
+      String(e.location || 'TBD'),
+      String(e.description?.substring(0, 45) || '')
     ])
 
     autoTable(doc, {

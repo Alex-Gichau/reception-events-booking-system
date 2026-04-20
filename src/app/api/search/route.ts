@@ -23,7 +23,14 @@ export async function GET(request: Request) {
     .or(`first_name.ilike.%${q}%,last_name.ilike.%${q}%`)
     .limit(3)
 
-  const results = []
+  interface SearchResult {
+    type: 'event' | 'client';
+    id: string | number;
+    title: string;
+    subtitle: string;
+  }
+
+  const results: SearchResult[] = []
 
   if (events) {
     events.forEach(e => results.push({ type: 'event', id: e.id, title: e.title, subtitle: e.date }))
