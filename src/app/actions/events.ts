@@ -178,3 +178,21 @@ export async function getEventById(eventId: string | number) {
   
   return data
 }
+
+export async function updatePaymentStatus(eventId: string | number, status: string) {
+  const supabase = await createClient()
+
+  const { error } = await supabase
+    .from("events")
+    .update({ payment_status: status })
+    .eq("id", eventId)
+
+  if (error) {
+    writeLog(`Failed to update payment status for event ${eventId}: ${error.message}`, 'ERROR')
+    throw new Error(error.message)
+  }
+
+  writeLog(`Payment status for event ${eventId} updated to ${status}`, 'INFO')
+  revalidatePath("/calendar")
+  revalidatePath("/dashboard")
+}

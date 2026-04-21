@@ -13,79 +13,62 @@ export default async function Home() {
   } catch (err) {
     console.error("Failed to fetch events for dashboard", err);
   }
+
+  const stats = [
+    { label: 'Total Revenue', value: `KSh ${events.reduce((acc, curr) => acc + (Number(curr.total_cost) || 0), 0).toLocaleString()}`, icon: DollarSign, color: 'bg-indigo-500' },
+    { label: 'Upcoming Events', value: events.filter(e => new Date(e.date) >= new Date(new Date().setHours(0,0,0,0))).length.toString(), icon: Calendar, color: 'bg-blue-500' },
+    { label: 'Paid Revenue', value: `KSh ${events.filter(e => e.payment_status === 'paid').reduce((acc, curr) => acc + (Number(curr.total_cost) || 0), 0).toLocaleString()}`, icon: CheckCircle, color: 'bg-emerald-500' },
+    { label: 'Pending Payment', value: `KSh ${events.filter(e => e.payment_status !== 'paid').reduce((acc, curr) => acc + (Number(curr.total_cost) || 0), 0).toLocaleString()}`, icon: ExternalLink, color: 'bg-rose-500' },
+  ];
+
   return (
     <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       {/* Header */}
-      <div className="flex justify-between items-center mb-8">
+      <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-10 gap-4">
         <div>
-          <h1 className="text-2xl font-bold text-gray-900">Event Dashboard</h1>
-          <p className="text-gray-500">Manage all your events in one place</p>
+          <h1 className="text-3xl font-extrabold text-gray-900 dark:text-white tracking-tight">Executive Overview</h1>
+          <p className="text-gray-500 dark:text-gray-400 mt-1">Real-time performance metrics and event orchestration</p>
         </div>
-        <Link href="/add-event">
-          <button className="flex items-center bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg transition">
-            <Plus className="mr-2 h-4 w-4" />
-            Add Event
-          </button>
-        </Link>
+        <div className="flex gap-3">
+          <Link href="/calendar">
+            <button className="flex items-center px-4 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 bg-white dark:bg-slate-900 border border-gray-300 dark:border-slate-700 rounded-lg hover:bg-gray-50 dark:hover:bg-slate-800 transition shadow-sm">
+              <Calendar className="mr-2 h-4 w-4" />
+              View Calendar
+            </button>
+          </Link>
+          <Link href="/add-event">
+            <button className="flex items-center bg-indigo-600 hover:bg-indigo-700 text-white px-5 py-2.5 rounded-lg transition shadow-lg shadow-indigo-200 dark:shadow-none font-semibold">
+              <Plus className="mr-2 h-5 w-5" />
+              Schedule Event
+            </button>
+          </Link>
+        </div>
       </div>
 
       {/* Stats Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-8">
-        <div className="bg-white dark:bg-slate-900 border border-gray-100 dark:border-slate-800 p-6 rounded-lg shadow-sm">
-          <div className="flex items-center">
-            <div className="p-3 rounded-full bg-blue-50 dark:bg-blue-900/30 text-blue-500 dark:text-blue-400">
-              <Calendar className="h-6 w-6" />
-            </div>
-            <div className="ml-4">
-              <p className="text-sm font-medium text-gray-500 dark:text-gray-400">Total Events</p>
-              <p className="text-xl font-semibold text-gray-900 dark:text-gray-100">{events.length}</p>
-            </div>
-          </div>
-        </div>
-        <div className="bg-white dark:bg-slate-900 border border-gray-100 dark:border-slate-800 p-6 rounded-lg shadow-sm">
-          <div className="flex items-center">
-            <div className="p-3 rounded-full bg-green-50 dark:bg-green-900/30 text-green-500 dark:text-green-400">
-              <CheckCircle className="h-6 w-6" />
-            </div>
-            <div className="ml-4">
-              <p className="text-sm font-medium text-gray-500 dark:text-gray-400">Upcoming</p>
-              <p className="text-xl font-semibold text-gray-900 dark:text-gray-100">
-                {events.filter(e => new Date(e.date) >= new Date(new Date().setHours(0,0,0,0))).length}
-              </p>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
+        {stats.map((stat, i) => (
+          <div key={i} className="relative overflow-hidden bg-white dark:bg-slate-900 border border-gray-100 dark:border-slate-800 p-6 rounded-2xl shadow-sm hover:shadow-md transition-shadow group">
+            <div className={`absolute top-0 right-0 w-24 h-24 -mr-8 -mt-8 opacity-10 rounded-full transition-transform group-hover:scale-110 ${stat.color}`}></div>
+            <div className="flex flex-col">
+              <div className={`p-3 rounded-xl w-fit mb-4 ${stat.color} bg-opacity-10 dark:bg-opacity-20`}>
+                <stat.icon className={`h-6 w-6 ${stat.color.replace('bg-', 'text-')}`} />
+              </div>
+              <p className="text-sm font-medium text-gray-500 dark:text-gray-400 mb-1">{stat.label}</p>
+              <p className="text-2xl font-bold text-gray-900 dark:text-gray-100 tracking-tight">{stat.value}</p>
             </div>
           </div>
-        </div>
-        <div className="bg-white dark:bg-slate-900 border border-gray-100 dark:border-slate-800 p-6 rounded-lg shadow-sm">
-          <div className="flex items-center">
-            <div className="p-3 rounded-full bg-indigo-50 dark:bg-indigo-900/30 text-indigo-500 dark:text-indigo-400">
-              <DollarSign className="h-6 w-6" />
-            </div>
-            <div className="ml-4">
-              <p className="text-sm font-medium text-gray-500 dark:text-gray-400">Estimated Revenue</p>
-              <p className="text-xl font-semibold text-gray-900 dark:text-gray-100">
-                KSh {events.reduce((acc, curr) => acc + (Number(curr.total_cost) || 0), 0).toLocaleString()}
-              </p>
-            </div>
-          </div>
-        </div>
-        <div className="bg-white dark:bg-slate-900 border border-gray-100 dark:border-slate-800 p-6 rounded-lg shadow-sm">
-          <div className="flex items-center">
-            <div className="p-3 rounded-full bg-amber-50 dark:bg-amber-900/30 text-amber-500 dark:text-amber-400">
-              <Users className="h-6 w-6" />
-            </div>
-            <div className="ml-4">
-              <p className="text-sm font-medium text-gray-500 dark:text-gray-400">Total Attendees</p>
-              <p className="text-xl font-semibold text-gray-900 dark:text-gray-100">
-                {events.reduce((acc, curr) => acc + (Number(curr.attendees_count) || 0), 0).toLocaleString()}
-              </p>
-            </div>
-          </div>
-        </div>
+        ))}
       </div>
 
-      <WeeklyEventsChart events={events} />
-
-      <UpcomingEventsList events={events} />
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="lg:col-span-2">
+          <WeeklyEventsChart events={events} />
+        </div>
+        <div>
+          <UpcomingEventsList events={events} />
+        </div>
+      </div>
     </main>
   );
 }

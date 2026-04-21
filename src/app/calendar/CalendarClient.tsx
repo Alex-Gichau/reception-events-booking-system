@@ -5,11 +5,11 @@ import { Calendar, momentLocalizer, Event as RBCEvent } from "react-big-calendar
 import moment from "moment"
 import { format } from "date-fns" // Only keeping format for manual parsing if used later in UI strings
 import "react-big-calendar/lib/css/react-big-calendar.css"
-import { deleteEvent } from "@/app/actions/events"
+import { deleteEvent, updatePaymentStatus } from "@/app/actions/events"
 import { useRouter } from "next/navigation"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { X, Clock, MapPin, AlignLeft, User, Plus, Printer, Banknote } from "lucide-react"
+import { X, Clock, MapPin, AlignLeft, User, Plus, Printer, Banknote, CreditCard } from "lucide-react"
 import jsPDF from "jspdf"
 import autoTable from "jspdf-autotable"
 
@@ -18,10 +18,12 @@ const localizer = momentLocalizer(moment)
 
 interface BigEvent extends RBCEvent {
   id: number | string;
+  title: string;
   color: string;
   description?: string;
   location?: string;
   total_cost?: number;
+  payment_status?: string;
 }
 
 export default function CalendarClient({ initialEvents }: { initialEvents: BigEvent[] }) {
